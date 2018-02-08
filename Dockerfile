@@ -1,6 +1,6 @@
 FROM ubuntu:17.10
 
-LABEL de.mindrunner.android-docker.flavour="ubuntu-standalone"
+ENV PATH "${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/bin"
 
 ENV ANDROID_SDK_HOME /opt/android-sdk-linux
 ENV ANDROID_SDK_ROOT /opt/android-sdk-linux
@@ -38,7 +38,5 @@ WORKDIR /opt/android-sdk-linux
 RUN /opt/tools/entrypoint.sh built-in
 
 RUN /opt/android-sdk-linux/tools/bin/sdkmanager "build-tools;26.0.2" "platforms;android-26" "system-images;android-26;google_apis;x86_64"
-
-ENV PATH "${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/bin"
 
 CMD /opt/tools/entrypoint.sh built-in
