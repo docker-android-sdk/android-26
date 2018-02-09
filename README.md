@@ -7,15 +7,15 @@ Docker for Android SDK 26 with preinstalled build tools and emulator image
 **Installed Packages**
 ```bash
 # sdkmanager --list
-  Path                                        | Version | Description                                | Location                                    
-  -------                                     | ------- | -------                                    | -------                                     
-  build-tools;26.0.2                          | 26.0.2  | Android SDK Build-Tools 26.0.2             | build-tools/26.0.2/                         
-  emulator                                    | 27.1.7  | Android Emulator                           | emulator/                                   
-  patcher;v4                                  | 1       | SDK Patch Applier v4                       | patcher/v4/                                 
-  platform-tools                              | 27.0.1  | Android SDK Platform-Tools                 | platform-tools/                             
-  platforms;android-26                        | 2       | Android SDK Platform 26                    | platforms/android-26/                       
+  Path                                        | Version | Description                                | Location
+  -------                                     | ------- | -------                                    | -------
+  build-tools;27.0.3                          | 27.0.3  | Android SDK Build-Tools 27.0.3             | build-tools/27.0.3/
+  emulator                                    | 27.1.7  | Android Emulator                           | emulator/
+  patcher;v4                                  | 1       | SDK Patch Applier v4                       | patcher/v4/
+  platform-tools                              | 27.0.1  | Android SDK Platform-Tools                 | platform-tools/
+  platforms;android-26                        | 2       | Android SDK Platform 26                    | platforms/android-26/
   system-images;android-26;google_apis;x86_64 | 8       | Google APIs Intel x86 Atom_64 System Image | system-images/android-26/google_apis/x86_64/
-  tools                                       | 26.1.1  | Android SDK Tools                          | tools/  
+  tools                                       | 26.1.1  | Android SDK Tools                          | tools/
 ```
 
 **Usage**
