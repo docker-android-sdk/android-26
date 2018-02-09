@@ -37,6 +37,10 @@ WORKDIR /opt/android-sdk-linux
 
 RUN /opt/tools/entrypoint.sh built-in
 
-RUN /opt/android-sdk-linux/tools/bin/sdkmanager "build-tools;26.0.2" "platforms;android-26" "system-images;android-26;google_apis;x86_64"
+RUN /opt/android-sdk-linux/tools/bin/sdkmanager "build-tools;27.0.3"
+
+RUN /opt/android-sdk-linux/tools/bin/sdkmanager "platforms;android-26"
+
+RUN /opt/android-sdk-linux/tools/bin/sdkmanager "system-images;android-26;google_apis;x86_64"
 
 CMD /opt/tools/entrypoint.sh built-in
