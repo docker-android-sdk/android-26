@@ -22,7 +22,7 @@ Docker for Android SDK 26 with preinstalled build tools and emulator image
 
 - Interactive way
   ```bash
-  $ docker run -it --rm --privileged docker-android-sdk/android-26:latest bash
+  $ docker run -it --rm --privileged androidsdk/android-26:latest bash
   # check installed packages
   $ sdkmanager --list
   # create and run emulator
@@ -35,8 +35,8 @@ Docker for Android SDK 26 with preinstalled build tools and emulator image
 - Non-interactive way
   ```bash
   # check installed packages
-  $ docker run -it --rm docker-android-sdk/android-26:latest sdkmanager --list
+  $ docker run -it --rm androidsdk/android-26:latest sdkmanager --list
   # create and run emulator
-  $ docker run -it --rm docker-android-sdk/android-26:latest avdmanager list avd
+  $ docker run -it --rm androidsdk/android-26:latest avdmanager list avd
   # You can also run other Android platform tools, which are all added to the PATH environment variable
   ```
