@@ -43,6 +43,8 @@ RUN /opt/android-sdk-linux/tools/bin/sdkmanager "platforms;android-26"
 
 RUN /opt/android-sdk-linux/tools/bin/sdkmanager "platform-tools"
 
+RUN /opt/android-sdk-linux/tools/bin/sdkmanager "emulator"
+
 RUN /opt/android-sdk-linux/tools/bin/sdkmanager "system-images;android-26;google_apis;x86_64"
 
 CMD /opt/tools/entrypoint.sh built-in
