@@ -7,15 +7,15 @@ Docker for Android SDK 26 with preinstalled build tools and emulator image
 **Installed Packages**
 ```bash
 # sdkmanager --list
-  Path                                        | Version | Description                                | Location
-  -------                                     | ------- | -------                                    | -------
-  build-tools;27.0.3                          | 27.0.3  | Android SDK Build-Tools 27.0.3             | build-tools/27.0.3/
-  emulator                                    | 27.1.7  | Android Emulator                           | emulator/
-  patcher;v4                                  | 1       | SDK Patch Applier v4                       | patcher/v4/
-  platform-tools                              | 27.0.1  | Android SDK Platform-Tools                 | platform-tools/
-  platforms;android-26                        | 2       | Android SDK Platform 26                    | platforms/android-26/
-  system-images;android-26;google_apis;x86_64 | 8       | Google APIs Intel x86 Atom_64 System Image | system-images/android-26/google_apis/x86_64/
-  tools                                       | 26.1.1  | Android SDK Tools                          | tools/
+  Path                              | Version | Description                       | Location
+  -------                           | ------- | -------                           | -------
+  build-tools;29.0.3                | 29.0.3  | Android SDK Build-Tools 29.0.3    | build-tools/29.0.3/
+  emulator                          | 30.0.5  | Android Emulator                  | emulator/
+  patcher;v4                        | 1       | SDK Patch Applier v4              | patcher/v4/
+  platform-tools                    | 29.0.6  | Android SDK Platform-Tools        | platform-tools/
+  platforms;android-26              | 2       | Android SDK Platform 26           | platforms/android-26/
+  system-images;a...gle_apis;x86_64 | 14      | Google APIs Intel x86 Atom_64 ... | system-images/a...le_apis/x86_64/
+  tools                             | 26.0.1  | Android SDK Tools 26.0.1          | tools/
 ```
 
 **Usage**
@@ -26,17 +26,20 @@ Docker for Android SDK 26 with preinstalled build tools and emulator image
   # check installed packages
   $ sdkmanager --list
   # create and run emulator
-  $ avdmanager create avd -n first_avd -k "system-images;android-26;google_apis;x86_64"
+  $ avdmanager create avd -n first_avd --abi google_apis/x86_64 -k "system-images;android-26;google_apis;x86_64"
   $ emulator -avd first_avd -no-window -no-audio &
   $ adb devices
   # You can also run other Android platform tools, which are all added to the PATH environment variable
   ```
 
+  To connect the emulator using `adb` on the docker host machine, start the container with `--net=host`.
+  You could also use [`scrcpy`](https://github.com/Genymobile/scrcpy) to do a screencast of the emulator.
+
 - Non-interactive way
   ```bash
   # check installed packages
   $ docker run -it --rm androidsdk/android-26:latest sdkmanager --list
-  # create and run emulator
+  # list existing emulators
   $ docker run -it --rm androidsdk/android-26:latest avdmanager list avd
   # You can also run other Android platform tools, which are all added to the PATH environment variable
   ```
