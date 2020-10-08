@@ -7,15 +7,15 @@ Docker for Android SDK 26 with preinstalled build tools and emulator image
 **Installed Packages**
 ```bash
 # sdkmanager --list
-  Path                              | Version | Description                       | Location
-  -------                           | ------- | -------                           | -------
-  build-tools;29.0.3                | 29.0.3  | Android SDK Build-Tools 29.0.3    | build-tools/29.0.3/
-  emulator                          | 30.0.5  | Android Emulator                  | emulator/
-  patcher;v4                        | 1       | SDK Patch Applier v4              | patcher/v4/
-  platform-tools                    | 29.0.6  | Android SDK Platform-Tools        | platform-tools/
-  platforms;android-26              | 2       | Android SDK Platform 26           | platforms/android-26/
-  system-images;a...gle_apis;x86_64 | 14      | Google APIs Intel x86 Atom_64 ... | system-images/a...le_apis/x86_64/
-  tools                             | 26.0.1  | Android SDK Tools 26.0.1          | tools/
+  Path                                        | Version | Description                                | Location
+  -------                                     | ------- | -------                                    | -------
+  build-tools;30.0.2                          | 30.0.2  | Android SDK Build-Tools 30.0.2             | build-tools/30.0.2/
+  cmdline-tools;latest                        | 2.1     | Android SDK Command-line Tools (latest)    | cmdline-tools/latest/
+  emulator                                    | 30.1.5  | Android Emulator                           | emulator/
+  patcher;v4                                  | 1       | SDK Patch Applier v4                       | patcher/v4/
+  platform-tools                              | 30.0.4  | Android SDK Platform-Tools                 | platform-tools/
+  platforms;android-26                        | 2       | Android SDK Platform 26                    | platforms/android-26/
+  system-images;android-26;google_apis;x86_64 | 16      | Google APIs Intel x86 Atom_64 System Image | system-images/android-26/google_apis/x86_64/
 ```
 
 **Usage**
